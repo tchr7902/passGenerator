@@ -11,8 +11,10 @@ function generatePassword() {
   } else if (password.length < "8" && password.length > "128") {
     alert("Password length must be between 8 and 128 characters!");
     return;
+  } else {
+     return;
   }
-  
+
   // uppercase
   includeUpper = prompt("Would you like to include uppercase letters? Y/N");
   if (includeUpper == "Y") {
@@ -52,8 +54,9 @@ function generatePassword() {
         alert("Invalid Input!")
         return;
   }
-}
 
+  // making password
+}
 
 
 // Get references to the #generate element
@@ -69,5 +72,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-generatePassword();
